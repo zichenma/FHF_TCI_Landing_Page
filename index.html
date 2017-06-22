@@ -1,0 +1,128 @@
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+	
+<%@ page import="com.FHF.Model.APISession"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<c:choose>
+	<c:when test="${sessionScope.sessionContext == null }">
+		<c:redirect url="home.jsp"></c:redirect>
+	</c:when>
+	
+</c:choose>-->
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" ng-app='myLandingPage'>
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+<title>First Help Financial</title>
+</head>
+<body>
+    <div class="container-fluid" ng-controller="mainController">
+            <div class="row" id="header" style="border-bottom: groove #428bca 2px;">
+			<div class="col-md-2 col-sm-2 "
+				style="padding-top: 0.5%; padding-bottom: 0.2%; margin-left:40px;">
+				<img src="images/fhf-logo.jpg" class="img-responsive"
+					alt="logo">
+			</div>
+
+			<div class="col-md-3 col-sm-2">
+			</div>
+			<nav role="navigation" style="margin-right:2%;">
+			<div class="navbar-right" style="padding-right: 2%;">
+				<ul class="nav navbar-nav no-borders">
+					<li class="dropdown" dropdown="" style="border-right: 5%"><a
+						href="#" class="dropdown-toggle" data-toggle="dropdown"
+						role="button" aria-haspopup="true" aria-expanded="false">Welcome,
+							Kenneth (UW) Pereira <span class="caret"></span>
+					</a>
+
+						<ul class="dropdown-menu">
+							<li><li class="summary"><a
+								
+								href="changePass.htm"> <span
+									class="label label-info"> <i
+										class="fa fa-key fa-lg fa-logout"></i>
+								</span> Change Password
+							</a></li></li>
+            
+            <li><a ui-sref="auth.logout" href="logout.htm"> <span
+							class="label label-warning"> <i
+								class="fa fa-sign-out fa-lg fa-logout"></i>
+								</span> Logout
+                                    </a></li>
+                </ul>
+                        </li>
+
+                        </ul>
+                    </div>
+                    </nav>
+		    </div>
+         </div>
+        <div class="container-fluid">
+        <div class="row threshold col-md-12 ">
+            <div class="panel panel-primary ">
+            <div class="panel-heading" style="background-color:#428bca; border:#428bca; color:#fff">Titles beyond Threshold</div>
+            <div class="panel-body text-center"><md-button class="md-fab btn-upper"  style=" background-color:#428bca;">14</md-button></div>
+            </div>
+
+            <div class="panel panel-success">
+            <div class="panel-heading" style="background-color:#81c784; border-color:#81c784;  color:#fff">Titles less than 5 days to Threshold</div>
+            <div class="panel-body text-center"><md-button class="md-fab btn-upper" 
+            style="background-color:#81c784;">14</md-button></div>
+            </div>
+            <div class="panel panel-danger">
+            <div class="panel-heading"  style="background-color:#de3641; border-color: #de3641; color:#eeeeee">Titles more than 5 days to Threshold</div>
+            <div class="panel-body text-center"> <md-button class="md-fab btn-upper" style="background-color:#de3641;">6</md-button></div>
+            </div>
+        </div>
+        <div class=" row my-application col-md-12">
+            <div class="panel panel-modify">  
+                <div class="panel-heading"><h4 >My Application</h4></div>
+                <hr>
+                <div class="panel-body text-center">
+                    <ul class="list-group" >
+                    <a href="FHFDashboard_old.html"><md-button class="md-raised  btn-modify danger">Applications After 07-01-2017</md-button></a>
+                    <md-button class="md-raised btn-modify primary">Applications Before 07-01-2017</md-button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+          <div class=" row my-application col-md-12">
+            <div class="panel panel-modify">  
+                <div class="panel-heading"><h4>My Dashboard</h4></div>
+                <hr>
+                <div class="panel-body text-center">
+                    <ul class="list-group">
+                    <md-button class="md-raised btn-modify primary" >Dealer Reserve Dashboard</md-button>
+                    <md-button class="md-raised btn-modify success" >Dealer Performace Dashboard</md-button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <footer >
+                <div class="navbar navbar-default navbar-fixed-bottom">
+                </div>
+            <footer>
+        </div>
+<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script  type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
+
